@@ -13,6 +13,6 @@ With this repository you can do alot of things in few lines with pygame. 🐍�
 <br>
 
 ## I have a problem. What shall I do? 🙋‍♂️
-1- read the .md files
+1- read .md files
 <br>
 2- ask me Discord: **omidziveh#2014**
