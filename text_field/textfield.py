@@ -40,18 +40,7 @@ class TextField:
         elif textRect.width + 50 < self.rect.width:
             self.canType = True
             self.color = (70, 70, 225)
-
-
-    def draw_button(self):
-        buttonSize = size.Size(self.size.right + 20, self.size.top + 5, 60, self.size.height - 10)
-        buttonRect = pygame.Rect(buttonSize.x, buttonSize.y, buttonSize.width, buttonSize.height)
-        textFont = pygame.font.Font(self.font, self.size.height - 36)
-        textSurface = textFont.render("Done!", True, (255, 255, 255))
-        textRect = textSurface.get_rect()
-        textRect.center = buttonSize.center
-        pygame.draw.rect(self.screen, (70, 70, 225), buttonRect)
-        self.screen.blit(textSurface, textRect)
-
+            
     def typing(self, event):
         if event.type == pygame.KEYDOWN and self.enable:
             if event.key == pygame.K_BACKSPACE:
@@ -70,11 +59,6 @@ class TextField:
             if not self.rect.collidepoint(event.pos[0], event.pos[1]):
                 self.color = (170, 170, 170)
                 self.enable = False
-
-    def onDone(self, event):
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_KP_ENTER:
-                return True
 
     @property
     def time(self):
